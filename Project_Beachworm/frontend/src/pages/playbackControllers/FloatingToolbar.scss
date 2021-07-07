@@ -1,0 +1,25 @@
+.floating-toolbar {
+    background-color: rgba(189, 119, 72, 0.637);
+    border-radius: 1em;
+}
+
+.scan {
+    &_elapsed, &_song-length {
+        margin-left: 0.125em;
+        margin-right: 0.125em;
+    }
+}
+
+.controls_small-buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls_small-buttons-wrapper > * {
+    color: white !important;
+}
+
+.controls_small-button {
+    font-size: 1.2em !important;
+}

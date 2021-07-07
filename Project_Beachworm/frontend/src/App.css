@@ -1,0 +1,10 @@
+.page-wrapper {
+  background: linear-gradient(0deg,#aa0131, #fd6748);
+  color: #fff;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.page-wrapper__footer {
+  height: 100%;
+}

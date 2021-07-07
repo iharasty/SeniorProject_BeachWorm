@@ -1,0 +1,191 @@
+.search-page_results-header {
+  margin-left: 2em;
+}
+
+.search-results-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin: 1% 0;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .profile_icon.MuiSvgIcon-root{
+    height: auto;
+    width: 100%;
+  } 
+
+  .results_items-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .results_title {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .result {
+    position: relative;
+    width: 35%;
+    transition-property: width;
+    transition-duration: .75s;
+  }
+
+  .result_image-wrapper {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    background-color: rgba(31, 31, 31, 0.1);
+  }
+
+  .result_spacer {
+    display: block;
+    width: 100%;
+    /* this is actually the height! padding percentages are calculated based on WIDTH
+    so this trick allows you to make a percentage-based square */
+    padding-bottom: 100%; 
+  }
+
+  .result_image {
+    position: absolute;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+
+  .result_image:hover {
+    box-shadow: inset 10px 10px 5px rgba(49, 47, 47, 0.712);
+    -moz-box-shadow: inset 10px 10px 5px rgba(49, 47, 47, 0.712);
+    -webkit-box-shadow:  10px 10px 5px rgba(49, 47, 47, 0.712);
+  }
+
+  .result_show-more {
+    width: 80%;
+    border-radius: 1em;
+    margin: auto auto 1em;
+  }
+
+  .result_title {
+    margin: 0.25rem 0;
+    cursor: pointer;
+    overflow-wrap: break-word;
+  }
+
+  .result_subtitle {
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+    overflow-wrap: break-word;
+  }
+  
+  .show-more:hover {
+    font-weight: bold;
+  }
+
+  .loading-image {
+    align-self: center;
+  }
+
+  .results_default-text {
+    margin: 1em;
+  }
+
+  .search-page-wrapper{
+    width: 100%;
+  }
+
+  .result{
+    transition: none;
+  }
+
+
+  .shrink-result-wrapper{
+    display: flex;
+    justify-content: center;
+  }
+
+  
+  .results-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 0 2%;
+    background: rgba(51, 51, 51, 0.308);
+    border-radius: 3%;
+    align-self: stretch;			
+    transition-property: background-color, height, width, opacity, margin;
+    transition-duration: 1s;
+  }
+
+  /* Full Screen Size */
+  @media screen and (max-width: 1920px) {
+    .shrink-result-wrapper {
+      width: 28%;
+      margin: 2%;
+    }
+  
+    /*Fixing the size of the images in the search page*/
+    .enabled .result{
+      width: 20%;
+      margin: 2%;
+    }
+  }
+
+  /* Smaller Screen Size */
+  @media screen and (max-width: 1440px) {
+    .shrink-result-wrapper {
+      width: 40%;
+      margin: 2%;
+    }
+
+    .enabled .result{
+      width: 25%;
+      margin: 2%;
+    }
+  }
+
+  /* Phone Screen Size and small browsers */  
+  @media screen and (max-width: 960px) {
+    .shrink-result-wrapper {
+      width: 90%;
+      margin: 2% 5%;
+    }    
+    .enabled .result{
+      width: 40%;
+      margin: 2%;
+    }
+
+  }
+  
+
+  .enabled.shrink-result-wrapper{
+    transition-property: height, width, padding;
+    transition-duration: 1s;
+  }
+
+  .enabled.results-wrapper{
+    width: 100%;
+    height: 100%;
+  }
+
+  .enabled.shrink-result-wrapper{
+    width: 90%;
+    height: 90%;
+  }
+
+  .disabled.results-wrapper{
+    opacity: 0%;
+  }
+
+  .disabled.shrink-result-wrapper{
+    height: 0%;
+    width: 0%;
+    margin: 0%;
+  }
+
+
+
